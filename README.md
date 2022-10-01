@@ -2,7 +2,7 @@
 This is the repository for beginners so that they can use this repository to make their first contribution to an open source project on GitHub. Beginner's can practice making first pull request to a public repository before doing the real thing!
 
 ### How to contribute to this project
-Copy the code already present and make the following changes.
+Copy the code already present, paste it and make the following changes.
 - Add your image in assets/images folder, and add the src in img tag.
 - Add your name
 - Add your position/designation/university.
