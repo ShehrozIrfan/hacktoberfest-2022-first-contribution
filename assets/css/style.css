@@ -50,6 +50,13 @@ body {
   font-size: 15px;
 }
 
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: black;
+    color: white;
+    
+  }
 @media(max-width: 300px) {
   .profile-image {
     width: 150px;
