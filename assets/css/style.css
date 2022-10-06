@@ -46,6 +46,10 @@ body {
   font-weight: bold;
 }
 
+.profile-skills {
+  font-size: 15px;
+}
+
 @media(max-width: 300px) {
   .profile-image {
     width: 150px;
