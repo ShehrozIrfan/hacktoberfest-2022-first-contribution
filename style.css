@@ -5,6 +5,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
 }
 
 .blockquote {
@@ -49,19 +53,6 @@ body {
 .profile-skills {
   font-size: 15px;
 }
-
-@media(max-width: 300px) {
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
-}
-body {
-  padding: 25px;
-  background-color: white;
-  color: black;
-  font-size: 25px;
-}
 .dark-mode {
   background-color: black;
   color: white;
@@ -69,4 +60,10 @@ body {
 .light-mode {
   background-color: white;
   color: black;
+}
+@media(max-width: 300px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
 }
