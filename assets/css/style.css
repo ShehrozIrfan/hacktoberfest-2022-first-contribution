@@ -50,8 +50,7 @@ body {
     text-align: center;
     padding: 3px;
     background-color: black;
-    color: white;
-    
+    color: white;  
   }
 @media(max-width: 300px) {
   .profile-image {
