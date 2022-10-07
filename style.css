@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.blockquote {
+  box-shadow: 0px 10px 6px rgb(211 211 211 / 50);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px 0px;
+}
+
+.profile-section {
+  box-shadow: 0px 10px 6px rgb(211 211 211 / 50);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  min-height: 300px
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.icon-link {
+  padding: 0px 10px;
+  text-decoration: none;
+}
+
+.icon-link-github {
+  color: black;
+}
+
+.icon-link-linkedin {
+  color: #0072b1;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-skills {
+  font-size: 15px;
+}
+
+@media(max-width: 300px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.light-mode {
+  background-color: white;
+  color: black;
+}
