@@ -53,6 +53,10 @@ body {
   color: white;
 }
 
+.profile-skills {
+  font-size: 15px;
+}
+
 @media(max-width: 300px) {
   .profile-image {
     width: 150px;
