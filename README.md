@@ -15,10 +15,8 @@ Copy the code already present, paste it and make the following changes.
 
 ### Getting started 🏁
 - Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
-![image](https://user-images.githubusercontent.com/74823287/194717694-3f818ea5-3079-468c-a5dd-4c18b7024fa9.png)
 - Clone your fork down to your local machine
 `git clone https://github.com/your-username/hacktoberfest-2022-first-contribution.git`
-![image](https://user-images.githubusercontent.com/74823287/194717749-8b0a0d41-2488-47b0-a7e7-2d9d55ec8ac2.png)
 - Create a branch
 `git checkout -b branch-name`
 - Make your changes
@@ -35,6 +33,5 @@ Copy the code already present, paste it and make the following changes.
 
 ### OUR VALUABLE CONTRIBUTORS✨
 <a href="https://github.com/ShehrozIrfan/hacktoberfest-2022-first-contribution/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ShehrozIrf![Uploading image.png…]()
-an/hacktoberfest-2022-first-contribution" />
+  <img src="https://contrib.rocks/image?repo=ShehrozIrfan/hacktoberfest-2022-first-contribution" />
 </a>
