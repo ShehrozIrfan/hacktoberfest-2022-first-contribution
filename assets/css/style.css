@@ -1,32 +1,61 @@
 * {
-  margin: 0;
+  margin: 3px;
   padding: 0;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.mb-0 {
+  color: rgb(20, 220, 170);
+}
+
 /**************dark mode start *******************/
-.mode {
-  float:right;
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 8px;
-  
+
+input[ type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
 }
-.change {
+
+.check {
+  display: block;
+  height: 20px;
+  width: 40px;
+  background: #0a0a0a;
+  border-radius: 20px;
   cursor: pointer;
-  border: 1px solid #555;
-  border-radius: 40%;
-  width: 50px;
-  text-align: center;
-  padding: 5px;
-  margin-left: 8px;
+  transition: ease-in 0.3s;
+  overflow: hidden;
+  position: relative;
 }
-.dark{
-  background-color: #222;
-  color: #e6e6e6;
+
+input[type="checkbox"]:checked~.check {
+  background: white;
+  box-shadow: 0 0 0 12000px #0a0a0a;
 }
+
+.check:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background: #878686;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked~.check:before {
+  background-color: #01f4fd;
+  position: absolute;
+  transform: translateX(20px);
+
+}
+
 /**************dark mode end *******************/
 
 .blockquote {
@@ -66,6 +95,7 @@ body {
 .profile-name {
   font-size: 20px;
   font-weight: bold;
+  color: lightcoral;
 }
 
 .footer {
@@ -77,6 +107,7 @@ body {
 
 .profile-skills {
   font-size: 15px;
+  color: rgb(195, 128, 240);
 }
 
 @media(max-width: 300px) {
