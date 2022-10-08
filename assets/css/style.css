@@ -66,13 +66,15 @@ body {
 .profile-name {
   font-size: 20px;
   font-weight: bold;
+  color: #0072b1;
 }
 
 .footer {
   text-align: center;
   padding: 3px;
-  background-color: black;
-  color: white;
+  /* background-color: #8D9093; */
+  
+  /* color: white; */
 }
 
 .profile-skills {
@@ -84,4 +86,10 @@ body {
     width: 150px;
     height: 150px;
   }
+}
+.hacktoberfestText{
+ color: black;
+ font-size: 100;
+ font-weight: bolder;
+
 }
