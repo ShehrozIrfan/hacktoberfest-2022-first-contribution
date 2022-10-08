@@ -6,14 +6,16 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 /**************dark mode start *******************/
+
 .mode {
   float:right;
   display: inline-flex;
   align-items: center;
   padding: 5px 8px;
-  
 }
+
 .change {
   cursor: pointer;
   border: 1px solid #555;
@@ -23,10 +25,12 @@ body {
   padding: 5px;
   margin-left: 8px;
 }
+
 .dark{
   background-color: #222;
   color: #e6e6e6;
 }
+
 /**************dark mode end *******************/
 
 .blockquote {
@@ -66,17 +70,22 @@ body {
 .profile-name {
   font-size: 20px;
   font-weight: bold;
+  color: #0072b1;
 }
 
 .footer {
   text-align: center;
   padding: 3px;
-  background-color: black;
-  color: white;
 }
 
 .profile-skills {
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.hacktoberfestText{
+ color: black;
+ font-size: 100;
+ font-weight: bolder;
 }
 
 @media(max-width: 300px) {
