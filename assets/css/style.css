@@ -96,3 +96,12 @@ body {
     height: 150px;
   }
 }
+
+/* RAJAT RAI CSS WORK */
+.dark-para{
+  background-color: rgb(20, 74, 251);
+  color: rgb(255, 255, 255);
+  padding: 7px;
+  border-radius: 10px;
+  margin-top: 17px;
+}
