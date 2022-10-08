@@ -16,14 +16,24 @@ Copy the code already present, paste it and make the following changes.
 ### Getting started 🏁
 - Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
 - Clone your fork down to your local machine
-`git clone https://github.com/your-username/hacktoberfest-2022-first-contribution.git`
+```bash 
+git clone https://github.com/your-username/hacktoberfest-2022-first-contribution.git
+```
 - Create a branch
-`git checkout -b branch-name`
+```bash
+git checkout -b branch-name
+```
 - Make your changes
 - Commit and push
-  - `git add .`
-  - `git commit -m 'Commit message'`
-  - `git push origin branch-name`
+  - ```bash
+  git add .
+  ```
+  - ```bash
+  git commit -m 'Commit message'
+  ```
+  - ```bash
+  git push origin branch-name
+  ```
 - Create a new pull request from your forked repository (Click the New Pull Request button located at the top of your repo) - Please make sure you made pull request from the `master` branch.
 - Wait for your PR review and merge approval!
 
