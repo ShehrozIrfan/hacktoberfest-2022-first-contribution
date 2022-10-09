@@ -95,4 +95,5 @@ body {
     width: 150px;
     height: 150px;
   }
+  .a:active { background-color: green; color: white; padding: 10px 25px; text-align: center; text-decoration: none; display: inline-block}
 }
