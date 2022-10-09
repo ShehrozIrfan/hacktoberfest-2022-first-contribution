@@ -10,6 +10,7 @@ Copy the code already present, paste it and make the following changes.
 - Add your position/designation/university.
 - Add your github and linkedin links.
 - Make a pull request for your work(please make sure you've created the pull request from master branch or your base branch is master) and wait for it to be merged!
+There are issues, which are already present, you can ask permission to assign issues to you. OR you can open an issue!
 
 --- 
 
