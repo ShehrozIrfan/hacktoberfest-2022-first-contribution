@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -88,6 +92,25 @@ body {
  color: black;
  font-size: 100;
  font-weight: bolder;
+}
+
+#backToTop {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99;
+  border: 1px solid gray; 
+  outline: none;
+  background-color: #FF9800;
+  color: white; 
+  cursor: pointer;
+  padding: 7px;
+  font-size: 25px;
+}
+
+#backToTop:hover {
+  background-color: #555;
 }
 
 @media(max-width: 300px) {
