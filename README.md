@@ -44,5 +44,5 @@ There are issues, which are already present, you can ask permission to assign is
 
 ### OUR VALUABLE CONTRIBUTORS✨
 <a href="https://github.com/ShehrozIrfan/hacktoberfest-2022-first-contribution/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ShehrozIrfan/hacktoberfest-2022-first-contribution" />
+  <img src="https://contrib.rocks/image?repo=ShehrozIrfan/hacktoberfest-2022-first-contribution" alt="OUR VALUABLE CONTRIBUTORS" />
 </a>
