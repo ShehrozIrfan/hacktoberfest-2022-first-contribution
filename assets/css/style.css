@@ -85,7 +85,9 @@ body {
     background:#564F6E;
     color:black
   }
-
+#footertext{
+    padding:13px;
+  }
 .profile-skills {
   font-size: 13px;
 }
