@@ -45,17 +45,43 @@ body {
 }
 
 .profile-section {
-  box-shadow: 0px 10px 6px rgb(211 211 211 / 50);
-  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 16px;
   border-radius: 10px;
   margin: 20px 0px;
-  min-height: 300px
+  height: 420px;
+  display: flex;
+  flex-direction: column;
 }
 
-.profile-image {
-  width: 200px;
-  height: 200px;
+.profile-section:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.profile-bio {
+  margin: auto;
+}
+
+.profile-github {
+  margin: 0 auto;
+}
+.profile-github p {
+  margin: 0;
+}
+
+.circular-img {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
   border-radius: 50%;
+  margin: auto;
+}
+
+.circular-img img {
+  width: 100%;
+  height: auto;
 }
 
 .icon-link {
@@ -114,8 +140,5 @@ body {
 }
 
 @media(max-width: 300px) {
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
+
 }
