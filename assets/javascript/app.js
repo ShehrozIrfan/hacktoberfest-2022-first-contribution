@@ -4,12 +4,16 @@ $(".change").on("click", function () {
   if ($("body").hasClass("dark")) {
     $("body").removeClass("dark");
     $(".change").text("Dark");
+    $("#myFilter").css("background", "")
+    $("#myFilter").css("color", "black")
     for (let i = 0; i < icons.length; i++) {
       icons[i].style.filter = ''
     }
   } else {
     $("body").addClass("dark");
     $(".change").text("Light");
+    $("#myFilter").css("background", "#393837")
+    $("#myFilter").css("color", "white")
     for (let i = 0; i < icons.length; i++) {
       icons[i].style.filter = 'invert(100%)'
     }
