@@ -1,6 +1,5 @@
 $('.change').on('click', function () {
   const icons = $('.icon-link-github')
-
   if ($('body').hasClass('dark')) {
     $('body').removeClass('dark')
     $('#myFilter').css('background', '')
