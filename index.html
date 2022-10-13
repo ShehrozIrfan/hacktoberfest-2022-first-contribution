@@ -1,607 +1,1125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hacktoberfest 2022</title>
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- bootstrap 5 cdn (added for dark/light toggle button)-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- bootstrap 4.6 cdn -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <!-- google fonts: Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-  </script>
-</head>
-<body>
-  <button onclick="scrollBackToTopFunction()" id="backToTop" title="Go to top">
-    <i class="fa fa-chevron-up"></i>
-  </button>
-  <div class="container parent" id="myItems">
-    <div class="row text-center pt-5">
-      <div class="col-md-12 form-check form-switch">
-        <input class="form-check-input change" type="checkbox" id="flexSwitchCheckDefault" style="font-size: 18px;">
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-12">
-        <blockquote class="blockquote">
-          <h4 class="mb-0"><strong>First Contribution Hacktoberfest 2022 List</strong></h4>
-        </blockquote>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 mb-3">
-        <input type="text" id="myFilter" class="form-control" onkeyup="searchFunction()" placeholder="Search for names..">
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <!-- Copy the code below, make desired changes by adding your image(make sure to choose the unique name for your image) first in the assets/images folder and then add in the image src, add your name, your designation/university, skills, and then add your social media links. -->
-      <!-- start copy -->
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/shehroz-irfan.jpeg" alt="Shehroz Irfan" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Shehroz Irfan</div>
-            <div class="profile-skills">Software Engineer | Ruby on Rails</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/shehrozirfan" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/shehroz-irfan-447881158/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacktoberfest 2022</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- bootstrap 5 cdn (added for dark/light toggle button)-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap 4.6 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <button
+      onclick="scrollBackToTopFunction()"
+      id="backToTop"
+      title="Go to top"
+    >
+      <i class="fa fa-chevron-up"></i>
+    </button>
+    <div class="container parent" id="myItems">
+      <div class="row text-center pt-5">
+        <div class="col-md-12 form-check form-switch">
+          <input
+            class="form-check-input change"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+            style="font-size: 18px;"
+          />
         </div>
       </div>
-      <!-- end copy -->
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/muanra217.jpg" alt="Muanra Rahen" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Muanra Rahen</div>
-            <div class="profile-skills">Front End Web Dev</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/Muanra217" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/muanra217/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <blockquote class="blockquote">
+            <h4 class="mb-0">
+              <strong>First Contribution Hacktoberfest 2022 List</strong>
+            </h4>
+          </blockquote>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="https://c1.staticflickr.com/3/2758/4060282653_1fc33aeea9_b.jpg" alt="Shehroz Irfan"
-              class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Max Walter</div>
-            <div class="profile-skills">Software Engineer | iOS Dev</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-sm-12 mb-3">
+          <input
+            type="text"
+            id="myFilter"
+            class="form-control"
+            onkeyup="searchFunction()"
+            placeholder="Search for names.."
+          />
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/sharan_image_hacktoberfest22.jpeg" alt="Sharan Panwar" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Sharan Panwar</div>
-            <div class="profile-skills">Student | Manipal University Jaipur | Cloud Computing</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/SharanPanwar" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/sharan-panwar-a761021b6/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/milena-step.jpeg" alt="Milena Step" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Milena Step</div>
-            <div class="profile-skills">Software Engineer</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/fideem" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/uttam.jpg" alt="Uttam" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Uttam Pandey</div>
-            <div class="profile-skills">Flutter developer,open source contributor</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/uttam4124" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/uttam-pandey-6346301aa/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/minhaj-313.jpeg" alt="minhaj-313" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Shaikh Minhaj</div>
-            <div class="profile-skills">Full Stack Developer | open source contributor</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/minhaj-313" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/shaikh-minhaj-softwareengineer/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/Abhinav_kumar.jpg" alt="Abhinav Kumar" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Abhinav Kumar</div>
-            <div class="profile-skills">CSE Student </div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/Aviii10" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/abhinav-kumar-350133213/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/YashRajSingh-4799.jpeg" alt="YashRajSingh-4799" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Yash Raj Singh</div>
-            <div class="profile-skills">Full Stack Developer | open source contributor</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/YashRajSingh-4799" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/yash-raj-singh-a585741a7/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="assets/images/unnamed.png" alt="Adnan Ahmad" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Adnan Ahmad</div>
-            <div class="profile-skills">Software Engineer | Competitive Coder</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/adnanahmads999" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/adnanahmads999/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="assets/images/nitesh.jpeg" alt="Nitesh mali" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Nitesh mali</div>
-            <div class="profile-skills">Full stack Developer | Competitive Coder</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/Imnitesh21" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/nitesh-mali/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/munish.jpg" alt="Munish Yadav" class="profile-image" />
-            <hr />
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Munish Yadav</div>
-            <div class="profile-skills">Electronics Engineer</div>
-            <hr />
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/munishyadav08" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/munish-yadav-942755221/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/unnamed.jpg" alt="aditya" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Aditya Singh</div>
-            <div class="profile-skills">Full Stack Developer | open source contributor</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/intelligence2002" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/adi008/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/Sandeep Velayudhan.jpeg" alt="Sandeep Velayudhan" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Sandeep Velayudhan</div>
-            <div class="profile-skills"> security researcher | open source contributor</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/Sanu1999" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/Siddharthsinh_Bihola.jpg" alt="Siddharthsinh Bihola" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Siddharthsinh Bihola</div>
-            <div class="profile-skills">IT Student</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/SiddharthBihola" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="www.linkedin.com/in/siddharthsinh-bihola" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/pankajsemwal.jpeg" alt="Pankaj Semwal" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Pankaj Semwal</div>
-            <div class="profile-skills">Computer Science Student| Web Developer</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/pnkjxmwl" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/pankaj-semwal-2a55601b5/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/hamdaan.jpg" alt="Hamdaan Ahmad" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Hamdaan Ahmad</div>
-            <div class="profile-skills"> Graphic designer | open source contributor</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/githamdaan25" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/adi.jpg" alt="adi" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Adi srivastava</div>
-            <div class="profile-skills"> Graphic designer | ML enthusiast</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/ZackDayn" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/Devesh Jain_Technical_Senior Member.jpg" alt="Pankaj Semwal"
-              class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Devesh Jain</div>
-            <div class="profile-skills">Developer | Open Source | Data</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/devesh2511" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/devesh-jain-2511dj/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/default.png" alt="Ashfaq Qureshi"
-              class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Masq915</div>
-            <div class="profile-skills">Developer | Open Source | Data</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/Masq915" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="www.linkedin.com/in/ashfaq-qureshi-1023a7222" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/Muskan Mishra.jpeg" alt="Pankaj Semwal" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Muskan Mishra</div>
-            <div class="profile-skills">B-Tech(Computer Science) Student| Web Developer</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/m-mishra2001" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/muskan-mishra-5ba1b11a4" target="_blank"><i class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-             </p>
-           </div>
-          </div>
-         </div>
-        </div>
-       <div class="col-md-4">
-         <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/Gaurav.jpeg" alt="Gaurav" class="profile-image">
-            <hr>
-          </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Qolbu Dzikru</div>
-            <div class="profile-skills">Developer</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/gauravhere24" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/gaurav-barnwal-83720624b/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row justify-content-center">
+        <!-- Copy the code below, make desired changes by adding your image(make sure to choose the unique name for your image) first in the assets/images folder and then add in the image src, add your name, your designation/university, skills, and then add your social media links. -->
+        <!-- start copy -->
         <div class="col-md-4">
-         <div class="profile-section">
-          <div class="text-center">
-            <img src="./assets/images/qolbudr.png" alt="Qolbu Dzikru" class="profile-image">
-            <hr>
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/shehroz-irfan.jpeg"
+                alt="Shehroz Irfan"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Shehroz Irfan</div>
+              <div class="profile-skills">
+                Software Engineer | Ruby on Rails
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/shehrozirfan" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/shehroz-irfan-447881158/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="profile-bio pt-2">
-            <div class="profile-name">Qolbu Dzikru</div>
-            <div class="profile-skills">Developer</div>
-            <hr>
-            <div class="profile-github pt-2">
-              <p>
-                <a href="https://github.com/qolbudr" target="_blank"><i
-                    class="fa fa-github-square fa-2x icon-link icon-link-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/qolbudr/" target="_blank"><i
-                    class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin" aria-hidden="true"></i></a>
-              </p>
+        </div>
+        <!-- end copy -->
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/muanra217.jpg"
+                alt="Muanra Rahen"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Muanra Rahen</div>
+              <div class="profile-skills">Front End Web Dev</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/Muanra217" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/muanra217/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="https://c1.staticflickr.com/3/2758/4060282653_1fc33aeea9_b.jpg"
+                alt="Shehroz Irfan"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Max Walter</div>
+              <div class="profile-skills">Software Engineer | iOS Dev</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/" target="_blank">
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/adinoid.png"
+                alt="Ali Fahruddin"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Ali Fahruddin</div>
+              <div class="profile-skills">
+                Software Engineer | Network Specialist
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/adinoid" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/adinoid/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/sharan_image_hacktoberfest22.jpeg"
+                alt="Sharan Panwar"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Sharan Panwar</div>
+              <div class="profile-skills">
+                Student | Manipal University Jaipur | Cloud Computing
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/SharanPanwar" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/sharan-panwar-a761021b6/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/milena-step.jpeg"
+                alt="Milena Step"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Milena Step</div>
+              <div class="profile-skills">Software Engineer</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/fideem" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/uttam.jpg"
+                alt="Uttam"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Uttam Pandey</div>
+              <div class="profile-skills">
+                Flutter developer,open source contributor
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/uttam4124" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/uttam-pandey-6346301aa/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/minhaj-313.jpeg"
+                alt="minhaj-313"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Shaikh Minhaj</div>
+              <div class="profile-skills">
+                Full Stack Developer | open source contributor
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/minhaj-313" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/shaikh-minhaj-softwareengineer/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Abhinav_kumar.jpg"
+                alt="Abhinav Kumar"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Abhinav Kumar</div>
+              <div class="profile-skills">CSE Student</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/Aviii10" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/abhinav-kumar-350133213/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/YashRajSingh-4799.jpeg"
+                alt="YashRajSingh-4799"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Yash Raj Singh</div>
+              <div class="profile-skills">
+                Full Stack Developer | open source contributor
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a
+                    href="https://github.com/YashRajSingh-4799"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/yash-raj-singh-a585741a7/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="assets/images/unnamed.png"
+                alt="Adnan Ahmad"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Adnan Ahmad</div>
+              <div class="profile-skills">
+                Software Engineer | Competitive Coder
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/adnanahmads999" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/adnanahmads999/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="assets/images/nitesh.jpeg"
+                alt="Nitesh mali"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Nitesh mali</div>
+              <div class="profile-skills">
+                Full stack Developer | Competitive Coder
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/Imnitesh21" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/nitesh-mali/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/munish.jpg"
+                alt="Munish Yadav"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Munish Yadav</div>
+              <div class="profile-skills">Electronics Engineer</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/munishyadav08" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/munish-yadav-942755221/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/unnamed.jpg"
+                alt="aditya"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Aditya Singh</div>
+              <div class="profile-skills">
+                Full Stack Developer | open source contributor
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/intelligence2002" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/adi008/" target="_blank">
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Sandeep Velayudhan.jpeg"
+                alt="Sandeep Velayudhan"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Sandeep Velayudhan</div>
+              <div class="profile-skills">
+                security researcher | open source contributor
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/Sanu1999" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Siddharthsinh_Bihola.jpg"
+                alt="Siddharthsinh Bihola"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Siddharthsinh Bihola</div>
+              <div class="profile-skills">IT Student</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/SiddharthBihola" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="www.linkedin.com/in/siddharthsinh-bihola"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/pankajsemwal.jpeg"
+                alt="Pankaj Semwal"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Pankaj Semwal</div>
+              <div class="profile-skills">
+                Computer Science Student| Web Developer
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/pnkjxmwl" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/pankaj-semwal-2a55601b5/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/hamdaan.jpg"
+                alt="Hamdaan Ahmad"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Hamdaan Ahmad</div>
+              <div class="profile-skills">
+                Graphic designer | open source contributor
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/githamdaan25" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/adi.jpg"
+                alt="adi"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Adi srivastava</div>
+              <div class="profile-skills">Graphic designer | ML enthusiast</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/ZackDayn" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Devesh Jain_Technical_Senior Member.jpg"
+                alt="Pankaj Semwal"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Devesh Jain</div>
+              <div class="profile-skills">Developer | Open Source | Data</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/devesh2511" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/devesh-jain-2511dj/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/default.png"
+                alt="Ashfaq Qureshi"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Masq915</div>
+              <div class="profile-skills">Developer | Open Source | Data</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/Masq915" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="www.linkedin.com/in/ashfaq-qureshi-1023a7222"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Muskan Mishra.jpeg"
+                alt="Pankaj Semwal"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Muskan Mishra</div>
+              <div class="profile-skills">
+                B-Tech(Computer Science) Student| Web Developer
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/m-mishra2001" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/muskan-mishra-5ba1b11a4"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Gaurav.jpeg"
+                alt="Gaurav"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Qolbu Dzikru</div>
+              <div class="profile-skills">Developer</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/gauravhere24" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/gaurav-barnwal-83720624b/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/qolbudr.png"
+                alt="Qolbu Dzikru"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Qolbu Dzikru</div>
+              <div class="profile-skills">Developer</div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/qolbudr" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/qolbudr/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Arka_probha_roy.jpeg"
+                alt="Arka Probha Roy"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Arka Probha Roy</div>
+              <div class="profile-skills">
+                Developer | Open Source | graphic designer
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/Arkapro1" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/arka-probha-roy-027169235"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Aravind Krishna.jpg"
+                alt="Aravind Krishna"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Aravind Krishna</div>
+              <div class="profile-skills">
+                MERN Developer | Open Source | GL Bajaj Institute of Management
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/akrishna777" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/aravind-krishna-09695a198"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/pankajsirari222.jpg"
+                alt="pankajsirari222"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">pankajsirari222</div>
+                <div class="profile-skills"> Btech CSE Student | Problem Solver | Web Developer | Open Source</div>
+                <hr />
+                <div class="profile-github pt-2">
+                  <p>
+                    <a href="https://github.com/pankajsirari222" target="_blank"><i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"></i>
+                    </a>
+                  </p>
+                </div>
+               </div>
+             </div>
+            </div>
+           </div>
+        <hr>       
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/fikri.jpg"
+                alt="Fikri Khairul Shaleh"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Fikri Khairul Shaleh</div>
+              <div class="profile-skills">
+                Web Developer
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/fikriks" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/fikri-khairul-shaleh"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="profile-section">
+            <div class="text-center">
+              <img
+                src="./assets/images/Kushagra Mathur.JPG"
+                alt="Kushagra Mathur"
+                class="profile-image"
+              />
+              <hr />
+            </div>
+            <div class="profile-bio pt-2">
+              <div class="profile-name">Kushagra Mathur</div>
+              <div class="profile-skills">
+                Full-Stack Developer | Blockchain Developer 
+              </div>
+              <hr />
+              <div class="profile-github pt-2">
+                <p>
+                  <a href="https://github.com/CoderGhost37" target="_blank">
+                    <i
+                      class="fa fa-github-square fa-2x icon-link icon-link-github"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kushagramathur37/"
+                    target="_blank"
+                  >
+                    <i
+                      class="fa fa-linkedin-square fa-2x icon-link icon-link-linkedin"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <hr>
-    <div class="row text-center">
-      <div class="col-md-12">
-        <div class="footerBlockquote">
+      <hr />
+      <div class="row text-center">
+        <div class="col-md-12">
+          <div class="footerBlockquote">
             <h4 class="mb-0"><strong>Hacktoberfest 2022</strong></h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="./assets/javascript/app.js"></script>
-<div id="footer">
-  <div class="container"></div>
-<footer>
-  <!-- Footer main -->
-  <section class="ft-main">
-    <div class="ft-main-item">
-      <h2 class="ft-title">About</h2>
-      <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Customers</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-    <div class="ft-main-item">
-      <h2 class="ft-title">Resources</h2>
-      <ul>
-        <li><a href="#">Docs</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">eBooks</a></li>
-        <li><a href="#">Webinars</a></li>
-      </ul>
-    </div>
-    <div class="ft-main-item">
-      <h2 class="ft-title">Contact</h2>
-      <ul>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Sales</a></li>
-        <li><a href="#">Advertise</a></li>
-      </ul>
-    </div>
-    <div class="ft-main-item">
-      <h2 class="ft-title">Stay Updated</h2>
-      <p>Subscribe to our newsletter to get our latest news.</p>
-      <form>
-        <input type="email" name="email" placeholder="Enter email address">
-        <input type="submit" value="Subscribe">
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer social -->
-  <section class="ft-social">
-    <ul class="ft-social-list">
-      <li><a href="#"><i class=" fa fa-brands fa-facebook"></i></a></li>
-      <li><a href="#"><i class=" fa fa-brands fa-twitter"></i></a></li>
-      <li><a href="#"><i class=" fa fa-brands fa-instagram"></i></a></li>
-      <li><a href="#"><i class=" fa fa-brands fa-github"></i></a></li>
-      <li><a href="#"><i class=" fa fa-brands fa-linkedin"></i></a></li>
-      <li><a href="#"><i class=" fa fa-brands fa-youtube"></i></a></li>
-    </ul>
-  </section>
-
-  <!-- Footer legal -->
-  <section class="ft-legal">
-    <ul class="ft-legal-list">
-      <li><a href="#">Terms &amp; Conditions</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      
-    </ul>
-  </section>
-</footer>
-
-</div>
-
-</body>
+    <script src="./assets/javascript/app.js"></script>
+  </body>
 </html>
