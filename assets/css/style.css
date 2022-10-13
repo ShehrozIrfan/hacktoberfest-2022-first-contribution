@@ -1,16 +1,30 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
+  font-size: 100%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
+@media (min-width: 450px) and (max-width: 900px) {
+  html{
+    font-size: 80%;
+  }
+
+}
+@media(max-width: 450px) {
+  html{
+    font-size: 50%;
+  }
+ 
+}
 /**************dark mode start *******************/
 
 .mode {
@@ -38,24 +52,54 @@ body {
 /**************dark mode end *******************/
 
 .blockquote {
-  box-shadow: 0px 10px 6px rgb(211 211 211 / 50);
   padding: 10px;
   border-radius: 10px;
   margin: 30px 0px;
 }
-
+.form-control{
+  border-radius: 1rem !important;
+  background-color: #eeeeee !important;
+}
+.form-control:active,
+.form-control:focus{
+  box-shadow: none !important;
+}
 .profile-section {
-  box-shadow: 0px 10px 6px rgb(211 211 211 / 50);
-  padding: 10px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px 10px;
   border-radius: 10px;
   margin: 20px 0px;
-  min-height: 300px
+  min-height: 300px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-section:hover{
+  transform: scale(1.02);
+}
+body.dark .profile-section{
+  border: 1px solid white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.profile-image {
+  width: 170px;
+  height: 170px;
+  
+}
+.circular-img {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
 }
 
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+ img {
+  width: 100%;
+  height: auto;
 }
 
 .icon-link {
@@ -66,26 +110,31 @@ body {
 .icon-link-github {
   color: black;
 }
+.icon-link:hover{
+  transform: scale(1.1);
+}
 
 .icon-link-linkedin {
   color: #0072b1;
 }
 
 .profile-name {
-  font-size: 20px;
+  text-align: center;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #0072b1;
 }
 
 .footerBlockquote {
-  box-shadow: 0px -9px 6px 0px rgb(211 211 211 / 50);
+  box-shadow: 0px -9px 6px 0px rgba(0,0,0,0.2);
   padding: 10px;
   border-radius: 10px;
   margin: 30px 0px;
 }
 
 .profile-skills {
-  font-size: 13px;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 .hacktoberfestText{
@@ -107,6 +156,7 @@ body {
   cursor: pointer;
   padding: 7px;
   font-size: 25px;
+  border: none;
 }
 
 #backToTop:hover {
