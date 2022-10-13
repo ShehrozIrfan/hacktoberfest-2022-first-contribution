@@ -3,6 +3,14 @@ This is the repository for beginners so that they can use this repository to mak
 
 --- 
 
+# Contribution is Excluded
+Hey there!
+If your contribution is excluded for this repository, then please visit the repository [Ruby Rocks](https://github.com/ShehrozIrfan/ruby-rocks/) for contribution to hacktoberfest. It contains a plenty of beginner's friendly issues accepted for hacktoberfest.
+
+Have fun!
+
+---
+
 ### How to contribute to this project 🧑‍💻
 Copy the code already present, paste it and make the following changes.
 - Add your image in assets/images folder, and add the src in img tag.
