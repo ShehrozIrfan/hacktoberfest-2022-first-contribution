@@ -12,13 +12,17 @@ Have fun!
 ---
 
 ### How to contribute to this project 🧑‍💻
-Copy the code already present, paste it and make the following changes.
-- Add your image in assets/images folder, and add the src in img tag.
-- Add your name
-- Add your position/designation/university.
-- Add your github and linkedin links.
-- Make a pull request for your work(please make sure you've created the pull request from master branch or your base branch is master) and wait for it to be merged!
-There are issues, which are already present, you can ask permission to assign issues to you. OR you can open an issue!
+
+Copy the existing code, paste it, and make the following changes:
+
+- Add your image to the `assets/images` folder and update the `src` in the `img` tag  
+- Add your name  
+- Add your position/designation/university  
+- Add your GitHub and LinkedIn links  
+
+Once done, create a pull request (ensure your base branch is `master`) and wait for it to be reviewed and merged.
+
+You can also request to be assigned to an existing issue or open a new one.
 
 --- 
 
